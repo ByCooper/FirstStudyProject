@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'inno.tech'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation("org.seleniumhq.selenium:selenium-java:4.51.0")
+    testImplementation("junit:junit:4.13.2")
+}
+
+test {
+    useJUnitPlatform()
+}
